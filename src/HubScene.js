@@ -24,6 +24,9 @@ export class HubScene extends Phaser.Scene {
     const w = this.cameras.main.width;
     const h = this.cameras.main.height;
 
+    this.howTo = null;
+    this.leaderboard = null;
+
     this.add.rectangle(w / 2, h / 2, w, h, 0x0a1628);
     const titleBg = this.add.graphics();
     titleBg.fillStyle(0x0a1628, 0.55);
@@ -59,9 +62,15 @@ export class HubScene extends Phaser.Scene {
 
     this.hubMap = new HubMapView(this, (chapterId) => this._startChapter(chapterId), recommended);
 
-    createMuteToggle(this, 15);
-    createLangToggle(this, 15);
-    const unsubLang = subscribeLangChange(() => this._refreshLang());
+    createMuteToggle(this, 30);
+    createLangToggle(this, 30);
+    const unsubLang = subscribeLangChange(() => {
+      try {
+        this._refreshLang();
+      } catch (err) {
+        console.error('[i18n] Hub refresh failed', err);
+      }
+    });
     this.events.once('shutdown', unsubLang);
 
     this.howToBtn = createPillButton(
@@ -71,10 +80,7 @@ export class HubScene extends Phaser.Scene {
       200,
       36,
       t('hub.howToPlay'),
-      () => {
-        if (this.howTo) return;
-        this.howTo = new HowToPlayOverlayView(this, (id) => this._startChapter(id), recommended);
-      },
+      () => this._openHowTo(recommended),
       true,
     ).setDepth(25);
 
@@ -110,10 +116,7 @@ export class HubScene extends Phaser.Scene {
       .setInteractive({ useHandCursor: true })
       .setDepth(20);
 
-    this.lbBtn.on('pointerup', () => {
-      if (this.leaderboard) return;
-      this.leaderboard = new LeaderboardOverlayView(this);
-    });
+    this.lbBtn.on('pointerup', () => this._openLeaderboard());
 
     bgmController.play(this, 'menu');
 
@@ -121,6 +124,30 @@ export class HubScene extends Phaser.Scene {
       this.hubMap?.destroy();
       this.leaderboard?.destroy();
       this.howTo?.destroy();
+      this.leaderboard = null;
+      this.howTo = null;
+    });
+  }
+
+  _openHowTo(recommended) {
+    this.howTo?.destroy();
+    this.howTo = null;
+    this.howTo = new HowToPlayOverlayView(
+      this,
+      (id) => {
+        this.howTo = null;
+        this._startChapter(id);
+      },
+      recommended,
+      { onClose: () => { this.howTo = null; } },
+    );
+  }
+
+  _openLeaderboard() {
+    this.leaderboard?.destroy();
+    this.leaderboard = null;
+    this.leaderboard = new LeaderboardOverlayView(this, {
+      onClose: () => { this.leaderboard = null; },
     });
   }
 
@@ -144,6 +171,10 @@ export class HubScene extends Phaser.Scene {
 
   async _startChapter(chapterId) {
     if (!isChapterPlayable(chapterId)) return;
+    this.howTo?.destroy();
+    this.howTo = null;
+    this.leaderboard?.destroy();
+    this.leaderboard = null;
     if (this.sound.context?.state === 'suspended') {
       await this.sound.context.resume();
     }

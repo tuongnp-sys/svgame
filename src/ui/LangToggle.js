@@ -3,13 +3,12 @@ import { createPillButton } from './phaserUi.js';
 
 /**
  * VN | EN language toggle — top-left (52, 48).
+ * Unsubscribes from lang changes on destroy (overlay toggles must not leak listeners).
  * @param {Phaser.Scene} scene
  * @param {number} [depth]
  */
 export function createLangToggle(scene, depth = 60) {
-  const syncLabel = () => {
-    btn.setLabel(getLang() === 'en' ? 'EN' : 'VN');
-  };
+  let alive = true;
 
   const btn = createPillButton(
     scene,
@@ -23,8 +22,27 @@ export function createLangToggle(scene, depth = 60) {
   );
   btn.setDepth(depth);
 
-  const unsub = subscribeLangChange(syncLabel);
-  scene.events.once('shutdown', unsub);
+  const syncLabel = () => {
+    if (!alive) return;
+    btn.setLabel(getLang() === 'en' ? 'EN' : 'VN');
+  };
 
-  return btn;
+  const unsub = subscribeLangChange(syncLabel);
+
+  const teardown = () => {
+    if (!alive) return;
+    alive = false;
+    unsub();
+  };
+
+  scene.events.once('shutdown', teardown);
+
+  const baseDestroy = btn.destroy.bind(btn);
+  return {
+    ...btn,
+    destroy() {
+      teardown();
+      baseDestroy();
+    },
+  };
 }

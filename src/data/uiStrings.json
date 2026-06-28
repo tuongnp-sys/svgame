@@ -160,6 +160,7 @@
     "phase2Label": { "vi": "Giai đoạn 2/2 · Còn {remaining} rào · Xe tự chạy", "en": "Phase 2/2 · {remaining} barriers left · Auto-run" },
     "barrierApproaching": { "vi": "Rào {n}/{total} sắp tới…", "en": "Barrier {n}/{total} approaching…" },
     "tooEarly": { "vi": "Quá sớm!", "en": "Too early!" },
+    "waitYellowBtn": { "vi": "Chờ nút vàng sáng…", "en": "Wait for the gold button…" },
     "swipeBlock": { "vi": "CHẶN!", "en": "BLOCK!" }
   },
   "juice": {

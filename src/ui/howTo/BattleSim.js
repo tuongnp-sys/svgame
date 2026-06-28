@@ -5,6 +5,47 @@ import { FONT_VI } from '../../core/fonts.js';
 import { t, tFmt, getBattleSimBinaryLines, getBattleSimLines } from '../../core/i18n.js';
 
 /**
+ * @param {Phaser.Scene} scene
+ */
+function createSimLifecycle(scene) {
+  let alive = true;
+  /** @type {Phaser.Time.TimerEvent[]} */
+  const timers = [];
+  /** @type {Phaser.Tweens.Tween[]} */
+  const tweens = [];
+
+  return {
+    isAlive: () => alive,
+    addTimer(config) {
+      const ev = scene.time.addEvent(config);
+      timers.push(ev);
+      return ev;
+    },
+    addTween(config) {
+      const userComplete = config.onComplete;
+      const tween = scene.tweens.add({
+        ...config,
+        onComplete: () => {
+          tweens.splice(tweens.indexOf(tween), 1);
+          if (!alive) return;
+          userComplete?.();
+        },
+      });
+      tweens.push(tween);
+      return tween;
+    },
+    destroy() {
+      if (!alive) return;
+      alive = false;
+      for (const ev of timers) ev.remove();
+      timers.length = 0;
+      for (const tw of tweens) tw.stop();
+      tweens.length = 0;
+    },
+  };
+}
+
+/**
  * Mô phỏng mini trận — cập nhật HUD ảo thắng/thua.
  * @param {Phaser.Scene} scene
  * @param {number} chapterId
@@ -14,6 +55,7 @@ import { t, tFmt, getBattleSimBinaryLines, getBattleSimLines } from '../../core/
  * @param {number} depth
  */
 export function createBattleSim(scene, chapterId, mechanic, centerX, centerY, depth) {
+  const life = createSimLifecycle(scene);
   const nodes = [];
   const track = (o) => {
     nodes.push(o);
@@ -33,28 +75,37 @@ export function createBattleSim(scene, chapterId, mechanic, centerX, centerY, de
       .setDepth(depth + 3),
   );
 
+  const safeHud = (text, color) => {
+    if (!life.isAlive() || !hud.active) return;
+    hud.setText(text);
+    if (color) hud.setColor(color);
+  };
+
   let demo = null;
+
   if (mechanic === 'rhythm') {
     demo = createRhythmHowToDemo(scene, centerX, centerY - 10, depth);
     const seq = [
-      { t: getBattleSimLines('rhythm')[0], d: 1200 },
-      { t: getBattleSimLines('rhythm')[1], d: 1200 },
-      { t: getBattleSimLines('rhythm')[2], d: 1000 },
-      { t: getBattleSimLines('rhythm')[3], d: 1200 },
+      getBattleSimLines('rhythm')[0],
+      getBattleSimLines('rhythm')[1],
+      getBattleSimLines('rhythm')[2],
+      getBattleSimLines('rhythm')[3],
     ];
     let i = 0;
     const step = () => {
-      hud.setText(seq[i].t);
-      hud.setColor(seq[i].t.includes('✗') ? '#e74c3c' : '#58d68d');
+      if (!life.isAlive()) return;
+      safeHud(seq[i], seq[i].includes('✗') ? '#e74c3c' : '#58d68d');
       i = (i + 1) % seq.length;
     };
     step();
-    const timer = scene.time.addEvent({ delay: 1300, loop: true, callback: step });
+    life.addTimer({ delay: 1300, loop: true, callback: step });
     return {
       destroy() {
-        timer.remove();
+        life.destroy();
         demo?.destroy();
+        demo = null;
         for (const n of nodes) n.destroy();
+        nodes.length = 0;
       },
     };
   }
@@ -77,22 +128,22 @@ export function createBattleSim(scene, chapterId, mechanic, centerX, centerY, de
     let stakes = 0;
     let escapes = 0;
     const updateHud = () => {
-      demo.updateStakeProgress(stakes, 10);
-      hud.setText(tFmt('battleSim.stakesHud', { stakes, escapes }));
-      hud.setColor(escapes >= 2 ? '#e74c3c' : '#f4d03f');
+      if (!life.isAlive()) return;
+      demo?.updateStakeProgress?.(stakes, 10);
+      safeHud(tFmt('battleSim.stakesHud', { stakes, escapes }), escapes >= 2 ? '#e74c3c' : '#f4d03f');
     };
     updateHud();
 
-    const shipTween = scene.tweens.add({
+    life.addTween({
       targets: ship,
       x: centerX + 100,
       duration: 2800,
       repeat: -1,
       onRepeat: () => {
+        if (!life.isAlive()) return;
         escapes = Math.min(3, escapes + 1);
         if (escapes > 2) {
-          hud.setText(t('battleSim.loseShips'));
-          hud.setColor('#e74c3c');
+          safeHud(t('battleSim.loseShips'), '#e74c3c');
           escapes = 0;
           stakes = 0;
         }
@@ -100,20 +151,21 @@ export function createBattleSim(scene, chapterId, mechanic, centerX, centerY, de
       },
     });
 
-    const stakeTimer = scene.time.addEvent({
+    life.addTimer({
       delay: 1600,
       loop: true,
       callback: () => {
+        if (!life.isAlive()) return;
         stakes = Math.min(10, stakes + 1);
-        stakeIcon.setAlpha(1);
-        scene.tweens.add({
+        if (stakeIcon.active) stakeIcon.setAlpha(1);
+        life.addTween({
           targets: stakeIcon,
           alpha: 0,
           duration: 400,
           onComplete: () => {
+            if (!life.isAlive()) return;
             if (stakes >= 10) {
-              hud.setText(t('battleSim.winStakes'));
-              hud.setColor('#58d68d');
+              safeHud(t('battleSim.winStakes'), '#58d68d');
               stakes = 0;
               escapes = 0;
             }
@@ -126,10 +178,11 @@ export function createBattleSim(scene, chapterId, mechanic, centerX, centerY, de
 
     return {
       destroy() {
-        shipTween.stop();
-        stakeTimer.remove();
+        life.destroy();
         demo?.destroy();
+        demo = null;
         for (const n of nodes) n.destroy();
+        nodes.length = 0;
       },
     };
   }
@@ -143,22 +196,25 @@ export function createBattleSim(scene, chapterId, mechanic, centerX, centerY, de
   };
   const seq = lines[mechanic] ?? [t('battleSim.defaultProgress')];
   let i = 0;
-  hud.setText(seq[0]);
-  const timer = scene.time.addEvent({
+  safeHud(seq[0]);
+  life.addTimer({
     delay: 1400,
     loop: true,
     callback: () => {
+      if (!life.isAlive()) return;
       i = (i + 1) % seq.length;
-      hud.setText(seq[i]);
-      hud.setColor(seq[i].includes('MISS') || seq[i].includes('bão') || seq[i].includes('storm') ? '#e74c3c' : '#58d68d');
+      const line = seq[i];
+      safeHud(line, line.includes('MISS') || line.includes('bão') || line.includes('storm') ? '#e74c3c' : '#58d68d');
     },
   });
 
   return {
     destroy() {
-      timer.remove();
+      life.destroy();
       demo?.destroy();
+      demo = null;
       for (const n of nodes) n.destroy();
+      nodes.length = 0;
     },
   };
 }

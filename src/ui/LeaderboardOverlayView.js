@@ -8,13 +8,15 @@ import { t, tFmt } from '../core/i18n.js';
 export class LeaderboardOverlayView {
   /**
    * @param {Phaser.Scene} scene
+   * @param {{ onClose?: () => void }} [options]
    */
-  constructor(scene) {
+  constructor(scene, options = {}) {
     const w = scene.cameras.main.width;
     const h = scene.cameras.main.height;
 
     this.scene = scene;
     this.nodes = [];
+    this._done = false;
 
     const backdrop = scene.add
       .rectangle(w / 2, h / 2, w, h, 0x000000, 0.75)
@@ -67,8 +69,7 @@ export class LeaderboardOverlayView {
 
     this.closeBtn = createPillButton(scene, w / 2, h * 0.68, 160, 40, t('common.close'), () => this.destroy(), true);
     this.closeBtn.setDepth(90);
-    this.nodes.push(this.closeBtn);
-    wireOverlayLang(scene, this, 92);
+    wireOverlayLang(scene, this, 92, options.onClose);
   }
 
   refreshLang() {
@@ -91,6 +92,9 @@ export class LeaderboardOverlayView {
   }
 
   destroy() {
+    if (this._done) return;
+    this._done = true;
+    this.closeBtn?.destroy();
     for (const n of this.nodes) n.destroy();
     this.nodes = [];
   }

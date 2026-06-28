@@ -10,6 +10,9 @@ import {
   createModalShell,
   mountLangTabs,
   bindScrollHint,
+  lockPhaserInput,
+  unlockPhaserInput,
+  deferredAfterPointer,
 } from './htmlModalHelper.js';
 
 /**
@@ -27,6 +30,9 @@ export class MilestoneMomentOverlayView {
     this.chapterId = chapterId;
     this._done = false;
     this._destroyed = false;
+    this._closing = false;
+
+    lockPhaserInput(scene);
 
     this.moment = moments[String(chapterId)] ?? moments['1'];
     this.meta = getChapterMeta(chapterId);
@@ -62,7 +68,11 @@ export class MilestoneMomentOverlayView {
     this.continueBtn.type = 'button';
     this.continueBtn.className = 'html-modal__btn html-modal__btn--primary';
     this.continueBtn.textContent = t('common.continue', this.lang);
-    this.continueBtn.addEventListener('click', () => this._finish());
+    this.continueBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      this._finish();
+    });
 
     panel.append(
       ribbon,
@@ -157,10 +167,13 @@ export class MilestoneMomentOverlayView {
   }
 
   _finish() {
-    if (this._done) return;
+    if (this._done || this._closing) return;
     this._done = true;
-    this.destroy();
-    this.onComplete?.();
+    this._closing = true;
+    deferredAfterPointer(() => {
+      this.destroy();
+      this.onComplete?.();
+    });
   }
 
   destroy() {
@@ -168,5 +181,6 @@ export class MilestoneMomentOverlayView {
     this._destroyed = true;
     this._unsubLang?.();
     this.root?.remove();
+    unlockPhaserInput(this.scene);
   }
 }

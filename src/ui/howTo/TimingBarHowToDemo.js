@@ -1,5 +1,6 @@
 import { FONT_VI } from '../../core/fonts.js';
 import { t, tFmt } from '../../core/i18n.js';
+
 /**
  * Demo animation — thanh timing + thanh cọc (chương 2).
  * @param {Phaser.Scene} scene
@@ -9,6 +10,7 @@ import { t, tFmt } from '../../core/i18n.js';
  */
 export function createTimingBarHowToDemo(scene, centerX, centerY, depth) {
   const nodes = [];
+  let alive = true;
   const track = (o) => {
     nodes.push(o);
     return o;
@@ -78,12 +80,15 @@ export function createTimingBarHowToDemo(scene, centerX, centerY, depth) {
   );
 
   const updateStakeProgress = (driven, required) => {
+    if (!alive || !stakeFill?.active) return;
     const req = Math.max(1, required);
     const ratio = Phaser.Math.Clamp(driven / req, 0, 1);
     const fillW = (barW - 4) * ratio;
     stakeFill.width = fillW;
     stakeFill.x = centerX - barW / 2 + 2 + fillW / 2;
-    stakeLabel.setText(tFmt('battleSim.stakesLabel', { done: driven, total: required }));
+    if (stakeLabel.active) {
+      stakeLabel.setText(tFmt('battleSim.stakesLabel', { done: driven, total: required }));
+    }
     stakeFill.setFillStyle(ratio >= 1 ? 0x58d68d : 0xf4d03f, ratio >= 1 ? 0.9 : 0.85);
   };
 
@@ -95,6 +100,7 @@ export function createTimingBarHowToDemo(scene, centerX, centerY, depth) {
     repeat: -1,
     ease: 'Sine.easeInOut',
     onUpdate: () => {
+      if (!alive) return;
       const dx = Math.abs(marker.x - zone.x);
       if (dx < 16) {
         tapHint.setText(t('common.tap'));
@@ -110,8 +116,11 @@ export function createTimingBarHowToDemo(scene, centerX, centerY, depth) {
   return {
     updateStakeProgress,
     destroy() {
+      if (!alive) return;
+      alive = false;
       tween.stop();
       for (const n of nodes) n.destroy();
+      nodes.length = 0;
     },
   };
 }

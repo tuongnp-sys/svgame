@@ -185,6 +185,7 @@ export class BattleBriefingOverlayView {
     this.titleText?.setText(t('briefing.title'));
     this.hookText?.setText(pickBilingual(meta?.hook) || content.title);
     this.panel?.destroy();
+    this.panel = null;
     const h = this.scene.cameras.main.height;
     this.panel = new ChapterBattleBriefingPanel(this.scene, this.chapterId, this.depth + 2, h * 0.12);
     this.skipBtn?.setLabel(t('common.skip'));
@@ -210,6 +211,7 @@ export class BattleBriefingOverlayView {
     this._done = true;
 
     this.panel?.destroy();
+    this.panel = null;
 
     this.enterBtn?.destroy();
 

@@ -2,6 +2,47 @@
  * Full-screen HTML modal — không map tọa độ Phaser.
  */
 
+/** @type {WeakMap<Phaser.Scene, boolean>} */
+const savedPhaserInput = new WeakMap();
+let phaserInputLockCount = 0;
+
+/**
+ * Block Phaser pointer input while an HTML modal is open (ref-counted).
+ * @param {Phaser.Scene} scene
+ */
+export function lockPhaserInput(scene) {
+  if (!scene?.input) return;
+  if (phaserInputLockCount === 0) {
+    savedPhaserInput.set(scene, scene.input.enabled);
+    scene.input.enabled = false;
+  }
+  phaserInputLockCount++;
+}
+
+/**
+ * Restore Phaser input after the last HTML modal closes.
+ * @param {Phaser.Scene} scene
+ */
+export function unlockPhaserInput(scene) {
+  if (!scene?.input || phaserInputLockCount <= 0) return;
+  phaserInputLockCount--;
+  if (phaserInputLockCount === 0) {
+    const prev = savedPhaserInput.get(scene);
+    scene.input.enabled = prev !== undefined ? prev : true;
+    savedPhaserInput.delete(scene);
+  }
+}
+
+/**
+ * Run after the current pointer gesture finishes — avoids click-through to Phaser.
+ * @param {() => void} fn
+ */
+export function deferredAfterPointer(fn) {
+  requestAnimationFrame(() => {
+    requestAnimationFrame(fn);
+  });
+}
+
 /** @param {string} str */
 export function escHtml(str) {
   return String(str)

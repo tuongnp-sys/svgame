@@ -1,5 +1,6 @@
 import { FONT_VI } from '../../core/fonts.js';
 import { t } from '../../core/i18n.js';
+
 /**
  * Demo animation — vòng tròn rhythm (chương 1).
  * @param {Phaser.Scene} scene
@@ -9,6 +10,7 @@ import { t } from '../../core/i18n.js';
  */
 export function createRhythmHowToDemo(scene, centerX, centerY, depth) {
   const nodes = [];
+  let alive = true;
   const track = (o) => {
     nodes.push(o);
     return o;
@@ -42,9 +44,11 @@ export function createRhythmHowToDemo(scene, centerX, centerY, depth) {
     repeat: -1,
     ease: 'Linear',
     onRepeat: () => {
+      if (!alive) return;
       note.y = centerY - 120;
     },
     onUpdate: () => {
+      if (!alive) return;
       const d = Math.abs(note.y - centerY);
       if (d < 22) {
         tapHint.setText(t('common.tap'));
@@ -61,8 +65,11 @@ export function createRhythmHowToDemo(scene, centerX, centerY, depth) {
 
   return {
     destroy() {
+      if (!alive) return;
+      alive = false;
       tween.stop();
       for (const n of nodes) n.destroy();
+      nodes.length = 0;
     },
   };
 }

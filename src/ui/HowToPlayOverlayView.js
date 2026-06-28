@@ -41,10 +41,10 @@ export class HowToPlayOverlayView {
    * @param {(chapterId: number) => void} onPlayChapter
 
    * @param {number} [initialChapterId]
-
+   * @param {{ onClose?: () => void }} [options]
    */
 
-  constructor(scene, onPlayChapter, initialChapterId) {
+  constructor(scene, onPlayChapter, initialChapterId, options = {}) {
 
     this.scene = scene;
 
@@ -236,9 +236,11 @@ export class HowToPlayOverlayView {
 
         if (isChapterUnlocked(this.selectedId) && isChapterPlayable(this.selectedId)) {
 
+          const chapterId = this.selectedId;
+
           this.destroy();
 
-          this.onPlayChapter(this.selectedId);
+          this.onPlayChapter(chapterId);
 
         }
 
@@ -272,7 +274,7 @@ export class HowToPlayOverlayView {
 
     ).setDepth(this.depth + 5);
 
-    wireOverlayLang(scene, this, this.depth + 20);
+    wireOverlayLang(scene, this, this.depth + 20, options.onClose);
 
   }
 
@@ -562,6 +564,8 @@ export class HowToPlayOverlayView {
 
     this.contentPanel?.destroy();
 
+    this.contentPanel = null;
+
     if (this.mode === 'battle') {
 
       this.contentPanel = new ChapterBattleBriefingPanel(
@@ -601,6 +605,10 @@ export class HowToPlayOverlayView {
 
 
   destroy() {
+
+    if (this._done) return;
+
+    this._done = true;
 
     this.contentPanel?.destroy();
 

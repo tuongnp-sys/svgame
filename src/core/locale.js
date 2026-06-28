@@ -33,7 +33,13 @@ export function setLang(lang) {
   if (getLang() === val) return;
   storageSet(LANG_KEY, val);
   storageSet(LEGACY_KEY, val);
-  for (const fn of langListeners) fn(val);
+  for (const fn of langListeners) {
+    try {
+      fn(val);
+    } catch (err) {
+      console.error('[i18n] lang listener failed', err);
+    }
+  }
 }
 
 /** @deprecated use getLang */

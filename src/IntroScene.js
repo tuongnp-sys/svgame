@@ -59,7 +59,8 @@ export class IntroScene extends Phaser.Scene {
       .setOrigin(0.5)
       .setAlpha(0);
 
-    createLangToggle(this, 20);
+    createLangToggle(this, 25);
+
     const unsubLang = subscribeLangChange(() => this._refreshLang());
     this.events.once('shutdown', unsubLang);
 
@@ -115,7 +116,14 @@ export class IntroScene extends Phaser.Scene {
       goToHub(this);
     };
 
-    this.input.once('pointerdown', goHub);
+    // Tap zone below top chrome (VN/EN toggle) — not whole-scene pointerdown
+    const topChrome = 88;
+    this.add
+      .rectangle(w / 2, topChrome + (h - topChrome) / 2, w, h - topChrome, 0xffffff, 0.001)
+      .setDepth(10)
+      .setInteractive({ useHandCursor: true })
+      .once('pointerup', goHub);
+
     this.input.keyboard?.once('keydown-SPACE', goHub);
     this.time.delayedCall(INTRO_SCENE_AUTO_MS, goHub);
   }

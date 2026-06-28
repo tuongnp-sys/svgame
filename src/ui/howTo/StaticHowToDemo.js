@@ -90,13 +90,23 @@ export function createStaticHowToDemo(scene, mechanic, centerX, centerY, depth, 
           .setOrigin(0.5)
           .setDepth(depth),
       );
-      scene.tweens.add({
+      let alive = true;
+      const arrowTween = scene.tweens.add({
         targets: arrow,
         y: centerY + 62,
         duration: 700,
         yoyo: true,
         repeat: -1,
       });
+      return {
+        destroy() {
+          if (!alive) return;
+          alive = false;
+          arrowTween.stop();
+          for (const n of nodes) n.destroy();
+          nodes.length = 0;
+        },
+      };
     }
   } else if (mechanic === 'path_draw') {
     const pts = [

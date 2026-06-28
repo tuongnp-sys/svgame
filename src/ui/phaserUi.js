@@ -71,10 +71,9 @@ export function createPillButton(scene, x, y, width, height, label, onClick, sec
     text.y = pressY;
   };
 
-  hit.on('pointerdown', (pointer) => {
+  hit.on('pointerdown', () => {
     pressed = true;
     press();
-    if (pointer?.event?.cancelable) pointer.event.preventDefault();
   });
   hit.on('pointerup', () => {
     const shouldFire = pressed;
@@ -100,6 +99,7 @@ export function createPillButton(scene, x, y, width, height, label, onClick, sec
       return this;
     },
     setLabel(str) {
+      if (!text?.active) return this;
       text.setText(str);
       return this;
     },
@@ -201,10 +201,9 @@ export function createDualLinePillButton(
     text2.y = pressY + 10;
   };
 
-  hit.on('pointerdown', (pointer) => {
+  hit.on('pointerdown', () => {
     pressed = true;
     press();
-    if (pointer?.event?.cancelable) pointer.event.preventDefault();
   });
   hit.on('pointerup', () => {
     const shouldFire = pressed;

@@ -48,8 +48,8 @@ export class ChapterScene extends Phaser.Scene {
 
     this.hud = new ChapterHudView(this);
     this.hud.setChapterMeta(meta, this.mechanic, this.chapterId);
-    createMuteToggle(this, 18);
-    createLangToggle(this, 18);
+    createMuteToggle(this, 30);
+    createLangToggle(this, 30);
     const unsubLang = subscribeLangChange(() => this._refreshLang());
     this.events.once('shutdown', () => {
       unsubLang();

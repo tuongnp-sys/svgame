@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import { createPillButton } from './phaserUi.js';
+import { createLangToggle } from './LangToggle.js';
 import { FONT_VI } from '../core/fonts.js';
 import { t, tFmt } from '../core/i18n.js';
 
@@ -209,50 +210,56 @@ export class RunnerView {
     const nodes = [
       scene.add.rectangle(w / 2, h / 2, w, h, 0x000000, 0.82).setDepth(d),
       scene.add.rectangle(w / 2, h * 0.46, w - 48, 340, 0x1a2744, 0.98).setDepth(d + 1),
-      scene.add
-        .text(w / 2, h * 0.28, t('mechanics.supplyDone'), {
-          fontFamily: FONT_VI,
-          fontSize: '15px',
-          fontStyle: 'bold',
-          color: '#58d68d',
-        })
-        .setOrigin(0.5)
-        .setDepth(d + 2),
-      scene.add
-        .text(w / 2, h * 0.34, t('mechanics.tankTitle'), {
-          fontFamily: FONT_VI,
-          fontSize: '20px',
-          fontStyle: 'bold',
-          color: '#f4d03f',
-        })
-        .setOrigin(0.5)
-        .setDepth(d + 2),
-      scene.add
-        .text(w / 2, h * 0.42, t('mechanics.tankSubtitle'), {
-          fontFamily: FONT_VI,
-          fontSize: '13px',
-          color: '#dfe6e9',
-        })
-        .setOrigin(0.5)
-        .setDepth(d + 2),
-      scene.add
-        .text(w / 2, h * 0.48, t('mechanics.tankRules'), {
-          fontFamily: FONT_VI,
-          fontSize: '13px',
-          color: '#95a5a6',
-          align: 'center',
-          lineSpacing: 6,
-        })
-        .setOrigin(0.5)
-        .setDepth(d + 2),
     ];
+
+    this._tankIntroSupply = scene.add
+      .text(w / 2, h * 0.28, t('mechanics.supplyDone'), {
+        fontFamily: FONT_VI,
+        fontSize: '15px',
+        fontStyle: 'bold',
+        color: '#58d68d',
+      })
+      .setOrigin(0.5)
+      .setDepth(d + 2);
+    this._tankIntroTitle = scene.add
+      .text(w / 2, h * 0.34, t('mechanics.tankTitle'), {
+        fontFamily: FONT_VI,
+        fontSize: '20px',
+        fontStyle: 'bold',
+        color: '#f4d03f',
+      })
+      .setOrigin(0.5)
+      .setDepth(d + 2);
+    this._tankIntroSubtitle = scene.add
+      .text(w / 2, h * 0.42, t('mechanics.tankSubtitle'), {
+        fontFamily: FONT_VI,
+        fontSize: '13px',
+        color: '#dfe6e9',
+      })
+      .setOrigin(0.5)
+      .setDepth(d + 2);
+    this._tankIntroRules = scene.add
+      .text(w / 2, h * 0.48, t('mechanics.tankRules'), {
+        fontFamily: FONT_VI,
+        fontSize: '13px',
+        color: '#95a5a6',
+        align: 'center',
+        lineSpacing: 6,
+      })
+      .setOrigin(0.5)
+      .setDepth(d + 2);
+
+    nodes.push(this._tankIntroSupply, this._tankIntroTitle, this._tankIntroSubtitle, this._tankIntroRules);
     this._tankIntroNodes = nodes;
 
-    const startBtn = createPillButton(scene, w / 2, h * 0.62, 260, 52, t('mechanics.startRun'), () => {
+    this._tankIntroStartBtn = createPillButton(scene, w / 2, h * 0.62, 260, 52, t('mechanics.startRun'), () => {
       this._destroyTankIntro();
       onReady?.();
     }).setDepth(d + 3);
-    this._tankIntroNodes.push(startBtn);
+    this._tankIntroNodes.push(this._tankIntroStartBtn);
+
+    const langBtn = createLangToggle(scene, d + 10);
+    this._tankIntroNodes.push(langBtn);
   }
 
   _destroyTankIntro() {
@@ -260,6 +267,20 @@ export class RunnerView {
       n?.destroy?.();
     }
     this._tankIntroNodes = [];
+    this._tankIntroSupply = null;
+    this._tankIntroTitle = null;
+    this._tankIntroSubtitle = null;
+    this._tankIntroRules = null;
+    this._tankIntroStartBtn = null;
+  }
+
+  _refreshTankIntroLang() {
+    if (!this._tankIntroTitle?.active) return;
+    this._tankIntroSupply?.setText(t('mechanics.supplyDone'));
+    this._tankIntroTitle?.setText(t('mechanics.tankTitle'));
+    this._tankIntroSubtitle?.setText(t('mechanics.tankSubtitle'));
+    this._tankIntroRules?.setText(t('mechanics.tankRules'));
+    this._tankIntroStartBtn?.setLabel(t('mechanics.startRun'));
   }
 
   _drawLanes() {
@@ -544,7 +565,7 @@ export class RunnerView {
   flashTankMiss() {
     this.scene.cameras.main.flash(180, 231, 76, 60);
     this.tankStatus.setText(t('mechanics.missedBarrier')).setColor('#e74c3c').setAlpha(1);
-    const t = this.scene.add
+    const hintText = this.scene.add
       .text(187, 480, t('mechanics.missedJumpLose'), {
         fontFamily: FONT_VI,
         fontSize: '16px',
@@ -554,18 +575,18 @@ export class RunnerView {
       .setOrigin(0.5)
       .setDepth(20);
     this.scene.tweens.add({
-      targets: t,
+      targets: hintText,
       y: 450,
       alpha: 0,
       duration: 800,
-      onComplete: () => t.destroy(),
+      onComplete: () => hintText.destroy(),
     });
   }
 
   flashJumpEarly() {
     this.tankStatus.setText(t('mechanics.tooEarly')).setColor('#e67e22').setAlpha(1);
-    const t = this.scene.add
-      .text(187, 500, 'Chờ nút vàng sáng…', {
+    const hintText = this.scene.add
+      .text(187, 500, t('mechanics.waitYellowBtn'), {
         fontFamily: FONT_VI,
         fontSize: '14px',
         fontStyle: 'bold',
@@ -574,11 +595,11 @@ export class RunnerView {
       .setOrigin(0.5)
       .setDepth(20);
     this.scene.tweens.add({
-      targets: t,
+      targets: hintText,
       y: 480,
       alpha: 0,
       duration: 600,
-      onComplete: () => t.destroy(),
+      onComplete: () => hintText.destroy(),
     });
     if (this._clearOkTimer) this._clearOkTimer.remove();
     this._clearOkTimer = this.scene.time.delayedCall(500, () => {
@@ -590,6 +611,7 @@ export class RunnerView {
   }
 
   refreshLang() {
+    this._refreshTankIntroLang();
     this.playerLabel?.setText(t('mechanics.reinforcements'));
     this.pipLegend?.setText(t('mechanics.runnerWinHint'));
     for (const o of this.obstacleSprites) {

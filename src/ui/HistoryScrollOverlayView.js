@@ -8,6 +8,9 @@ import {
   createModalShell,
   mountLangTabs,
   bindScrollHint,
+  lockPhaserInput,
+  unlockPhaserInput,
+  deferredAfterPointer,
 } from './htmlModalHelper.js';
 
 /**
@@ -24,6 +27,9 @@ export class HistoryScrollOverlayView {
     this.chapterId = chapterId;
     this.onClose = options.onClose;
     this._destroyed = false;
+    this._closing = false;
+
+    lockPhaserInput(scene);
 
     this.lang = getLang();
     this.summary = getHistorySummary(chapterId);
@@ -57,7 +63,11 @@ export class HistoryScrollOverlayView {
     this.closeBtn.type = 'button';
     this.closeBtn.className = 'html-modal__btn html-modal__btn--secondary';
     this.closeBtn.textContent = t('common.close', this.lang);
-    this.closeBtn.addEventListener('click', () => this._close());
+    this.closeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      this._close();
+    });
 
     panel.append(
       this.titleEl,
@@ -150,9 +160,12 @@ export class HistoryScrollOverlayView {
   }
 
   _close() {
-    if (this._destroyed) return;
-    this.destroy();
-    this.onClose?.();
+    if (this._destroyed || this._closing) return;
+    this._closing = true;
+    deferredAfterPointer(() => {
+      this.destroy();
+      this.onClose?.();
+    });
   }
 
   destroy() {
@@ -160,6 +173,7 @@ export class HistoryScrollOverlayView {
     this._destroyed = true;
     this._unsubLang?.();
     this.root?.remove();
+    unlockPhaserInput(this.scene);
   }
 }
 
