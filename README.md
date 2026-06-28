@@ -30,6 +30,8 @@ npm run package:gamepix
 
 Xem `docs/GAMEPIX_INTEGRATION.md`.
 
+Xem **`docs/I18N_MULTISCENE_PLAYBOOK.md`** và **`AGENTS.md`** — bài học song ngữ VN/EN, overlay, lifecycle (cho agent/dev tiếp quản).
+
 ## Cấu trúc
 
 ```

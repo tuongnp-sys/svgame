@@ -1,0 +1,26 @@
+---
+description: Song ngữ VN/EN, overlay Phaser/HTML, lifecycle — đọc playbook trước khi sửa i18n hoặc UI overlay
+globs: src/core/locale.js,src/core/i18n.js,src/ui/LangToggle.js,src/ui/langOverlayHelper.js,src/ui/htmlModalHelper.js,src/ui/*Overlay*.js,src/ui/howTo/**,src/HubScene.js,src/IntroScene.js,src/ChapterScene.js,src/data/uiStrings.json,docs/I18N_MULTISCENE_PLAYBOOK.md
+alwaysApply: false
+---
+
+# i18n + multi-scene / overlay (suvietgame)
+
+Trước khi sửa file trong glob, đọc **`docs/I18N_MULTISCENE_PLAYBOOK.md`**.
+
+## Bắt buộc
+
+1. **`subscribeLangChange` → `unsub` trong `destroy()`** — kể cả `LangToggle` (không chỉ scene shutdown).
+2. **HTML modal** (`HistoryScrollOverlayView`, `MilestoneMomentOverlayView`): `lockPhaserInput` / `unlockPhaserInput`, đóng bằng `deferredAfterPointer`.
+3. **Demo/sim** (`BattleSim`, HowTo demos): dừng timer/tween + flag `alive` trước destroy; `refreshLang` destroy panel cũ trước rebuild.
+4. **Không shadow import i18n** — không `const t = scene.add.text` khi dùng `t('key')`.
+5. **Overlay scene ref** — null `howTo`, `leaderboard`, `_historyOverlay` trong `onClose`.
+6. **Depth** — LangToggle overlay phải cao hơn backdrop overlay (≥ depth + 10).
+
+## Smoke test sau thay đổi
+
+Hub VN/EN + HowTo reopen; ch.6 tank intro lang; victory → history → ĐÓNG (không restart); console không leak `[i18n] lang listener failed`.
+
+## Git
+
+Không commit/push trừ khi user yêu cầu.
