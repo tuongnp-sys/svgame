@@ -1,0 +1,220 @@
+{
+  "1": {
+    "title": { "vi": "Cội nguồn Đông Sơn", "en": "Dong Son Origins" },
+    "subtitle": { "vi": "Văn Lang — Âu Lạc · 700 TCN — 179 TCN", "en": "Van Lang — Au Lac · 700 BCE — 179 BCE" },
+    "hook": {
+      "vi": "Giai đoạn bộ lạc tiến tới nhà nước có tổ chức trên đồng bằng Bắc Bộ — nền móng ký ức “cội nguồn” trước thời Bắc thuộc.",
+      "en": "From tribal communities toward an organized polity on the northern delta — the foundation of “origins” before long northern domination."
+    },
+    "beats": [
+      {
+        "label": { "vi": "Văn hóa Đông Sơn", "en": "Dong Son culture" },
+        "body": {
+          "vi": "Trống Đồng, chim Lạc, đúc đồng tinh xảo — bằng chứng văn minh bản địa hơn hai thiên niên kỷ trước trên đồng bằng Bắc Bộ.",
+          "en": "Bronze drums, Lac birds, and masterful casting — evidence of a native civilization on the northern delta more than two millennia ago."
+        }
+      },
+      {
+        "label": { "vi": "Văn Lang · Hùng Vương", "en": "Van Lang · Hung kings" },
+        "body": {
+          "vi": "Truyền thuyết và tư liệu cổ gắn liên minh bộ lạc Văn Lang với đời Hùng Vương — hình thái quốc gia sơ khai trên vùng địa lý tương đối thống nhất.",
+          "en": "Legend and early sources link the Van Lang tribal confederacy to the Hung kings — an early state across a largely shared territory."
+        }
+      },
+      {
+        "label": { "vi": "Thành Cổ Loa · Âu Lạc", "en": "Co Loa citadel · Au Lac" },
+        "body": {
+          "vi": "Cuối TK III TCN, Thục Phán lập Âu Lạc. Thành Cổ Loa (~179 TCN) với vòng thành đồng tâm, hào nước trên đất liền đồng bằng, bám vùng sông — công trình quân sự đô thị tiêu biểu bản địa.",
+          "en": "In the late 3rd century BCE, Thuc Phan founded Au Lac. Co Loa citadel (~179 BCE), with concentric walls and moats on the delta lowlands near rivers, stands among the era’s finest native military–urban works."
+        },
+        "emphasis": true
+      }
+    ],
+    "takeaway": {
+      "vi": "700 TCN — 179 TCN · Cội nguồn trước Bắc thuộc dài hơn nghìn năm.",
+      "en": "700 BCE — 179 BCE · Origins before more than a millennium of domination."
+    }
+  },
+  "2": {
+    "title": { "vi": "Chiến thắng Bạch Đằng", "en": "Victory at Bach Dang" },
+    "subtitle": { "vi": "938 · Ngô Quyền · Kết thúc Bắc thuộc", "en": "938 · Ngo Quyen · End of domination" },
+    "hook": {
+      "vi": "Sau hơn nghìn năm đô hộ, một trận trên sông mở lại thời kỳ độc lập tự chủ.",
+      "en": "After more than a millennium of domination, one river battle reopened an era of independence."
+    },
+    "beats": [
+      {
+        "label": { "vi": "Bối cảnh", "en": "Context" },
+        "body": {
+          "vi": "Cuối thế kỷ IX, loạn 12 sứ quân suy yếu nhà Đường. Ngô Quyền đứng đầu kháng chiến chống quân Nam Hán do Lưu Hoằng Thao chỉ huy xâm lược.",
+          "en": "By the late 9th century, the Twelve Warlords crisis weakened Tang rule. Ngo Quyen led resistance against the Southern Han invasion commanded by Liu Hongcao."
+        }
+      },
+      {
+        "label": { "vi": "Trận Bạch Đằng 938", "en": "Bach Dang 938" },
+        "body": {
+          "vi": "Tháng 12/938 trên sông Bạch Đằng (Hải Phòng — Quảng Ninh): cọc gỗ mũi nhọn dưới lòng sông, dụ thuyền địch lúc triều lên; triều rút, thuyền mắc cọc, quân ta phản công.",
+          "en": "December 938 on the Bach Dang River (today’s Hai Phong — Quang Ninh): sharpened stakes in the riverbed lured the fleet at high tide; as the tide fell, ships snagged and our forces counterattacked."
+        },
+        "emphasis": true
+      },
+      {
+        "label": { "vi": "Ý nghĩa", "en": "Significance" },
+        "body": {
+          "vi": "Quân Nam Hán tan vỡ — mốc thường được coi là chấm dứt Bắc thuộc lần thứ nhất. Ngô Quyền xưng vương, mở tiền đề các triều đại nội địa.",
+          "en": "Southern Han forces collapsed — historians mark this as the end of the first long era of domination. Ngo Quyen took the throne, prelude to later native dynasties."
+        }
+      }
+    ],
+    "takeaway": {
+      "vi": "938 · Lợi dụng địa hình, thủy triều và ý chí dân tộc.",
+      "en": "938 · Terrain, tides, and national will."
+    }
+  },
+  "3": {
+    "title": { "vi": "Thời kỳ Đông A", "en": "The Dong A Era" },
+    "subtitle": { "vi": "Lý — Trần · Diên Hồng · Kháng Nguyên-Mông", "en": "Ly — Tran · Dien Hong · Resisting the Yuan" },
+    "hook": {
+      "vi": "Thế kỷ XIII, Đại Việt đứng trước đế quốc Mông Cổ — Nguyên mở rộng khắp Á — Âu.",
+      "en": "In the 13th century, Dai Viet faced the Mongol — Yuan empire expanding across Asia and Europe."
+    },
+    "beats": [
+      {
+        "label": { "vi": "Hội nghị Diên Hồng", "en": "Dien Hong assembly" },
+        "body": {
+          "vi": "Tháng 10/1284, vua Trần Nhân Tông hỏi toàn dân — già, trẻ, gái, trai — có nên đánh hay cầu hòa. Hội nghị chốt một lòng kháng chiến.",
+          "en": "October 1284: King Tran Nhan Tong asked the whole people — old and young, women and men — whether to fight or sue for peace. Dien Hong resolved on war."
+        },
+        "emphasis": true
+      },
+      {
+        "label": { "vi": "Chiến lược kháng chiến", "en": "Resistance strategy" },
+        "body": {
+          "vi": "Trần Hưng Đạo và các tướng áp dụng “vườn không nhà trống”: sơ tán dân, đốt Thăng Long, kéo giặc vào sâu, cắt tiếp viện, đánh úp trên sông và đèo.",
+          "en": "Tran Hung Dao and commanders applied the “empty garden, empty house” strategy: evacuate civilians, burn Thang Long, draw invaders deep, cut supplies, ambush on rivers and passes."
+        }
+      },
+      {
+        "label": { "vi": "Ba lần đuổi giặc", "en": "Three invasions repelled" },
+        "body": {
+          "vi": "Quân Nguyên-Mông tấn công 1258, 1285, 1287–1288 đều bị đẩy lui. Bạch Đằng 1288 (tái hiện chiến thuật cọc gỗ) và Tây Kết tiêu biểu cho phản công quyết liệt.",
+          "en": "Yuan-Mongol attacks in 1258, 1285, and 1287–1288 were all repelled. Bach Dang 1288 (reviving stake tactics) and Tay Ket exemplify Dai Viet’s fierce counteroffensive."
+        }
+      }
+    ],
+    "takeaway": {
+      "vi": "Đoàn kết toàn dân, ngoại giao linh hoạt và quân sự thích ứng.",
+      "en": "National unity, flexible diplomacy, and adaptive warfare."
+    }
+  },
+  "4": {
+    "title": { "vi": "Lam Sơn & Ngọc Hồi — Đống Đa", "en": "Lam Son & Ngoc Hoi — Dong Da" },
+    "subtitle": { "vi": "1418 — 1427 · 1789 · Giành lại độc lập", "en": "1418 — 1427 · 1789 · Restoring independence" },
+    "hook": {
+      "vi": "Hai mốc cách ba thế kỷ — kháng chiến bền bỉ và đòn tấn công thần tốc — cùng bảo vệ chủ quyền.",
+      "en": "Two milestones three centuries apart — enduring resistance and swift strikes — both preserving sovereignty."
+    },
+    "beats": [
+      {
+        "label": { "vi": "Khởi nghĩa Lam Sơn", "en": "Lam Son uprising" },
+        "body": {
+          "vi": "1418, Lê Lợi phất cờ tại Thanh Hóa chống ách đô hộ nhà Minh. Hơn chín năm kết hợp du kích và chính quy; Chi Lăng — Xương Giang (1427) buộc quân Minh rút lui.",
+          "en": "In 1418 Le Loi raised the flag in Thanh Hoa against Ming domination. Over nine years of guerrilla and regular warfare; Chi Lang — Xuong Giang (1427) forced Ming withdrawal."
+        },
+        "emphasis": true
+      },
+      {
+        "label": { "vi": "Ngọc Hồi — Đống Đa 1789", "en": "Ngoc Hoi — Dong Da 1789" },
+        "body": {
+          "vi": "Quang Trung (Nguyễn Huệ) hành quân thần tốc từ Phú Xuân. Đêm 4 rạng 5 tháng Giêng 1789, quân Tây Sơn đại phá quân Thanh; vài ngày sau Thăng Long được giải phóng.",
+          "en": "Quang Trung (Nguyen Hue) marched swiftly from Phu Xuan. On the night of 4–5 January 1789, Tay Son forces crushed the Qing; within days Thang Long was freed."
+        },
+        "emphasis": true
+      },
+      {
+        "label": { "vi": "Ý nghĩa", "en": "Significance" },
+        "body": {
+          "vi": "Lam Sơn khôi phục độc lập sau đô hộ Minh; Ngọc Hồi — Đống Đa là một trong những chiến thắng quân sự nhanh và rực rỡ nhất khi ngoại bang đe dọa đất nước.",
+          "en": "Lam Son restored independence after Ming rule; Ngoc Hoi — Dong Da ranks among the swiftest, brightest victories when foreign powers threatened the realm."
+        }
+      }
+    ],
+    "takeaway": {
+      "vi": "1418 — 1427 · 1789 · Kiên trì và quyết đoán đều cứu vãn chủ quyền.",
+      "en": "1418 — 1427 · 1789 · Endurance and decisiveness both preserve sovereignty."
+    }
+  },
+  "5": {
+    "title": { "vi": "Nam tiến & thống nhất bờ cõi", "en": "Southward expansion & a unified realm" },
+    "subtitle": { "vi": "1306 — 1945 · Gia Long · Chủ quyền biển đảo", "en": "1306 — 1945 · Gia Long · Maritime sovereignty" },
+    "hook": {
+      "vi": "Quá trình gắn kết nhiều vùng đất, dân cư và văn hóa thành một giang sơn liền một dải — từ Bắc tới Cực Nam.",
+      "en": "Binding regions, peoples, and cultures into one continuous realm — from the north to the southernmost tip."
+    },
+    "beats": [
+      {
+        "label": { "vi": "Nam tiến", "en": "Southward frontier" },
+        "body": {
+          "vi": "Từ TK XIV, các triều Việt mở biên giới phía Nam — tiếp xúc và tranh chấp với Champa, mở mang Thuận Hóa (1306). TK XVII–XVIII, chúa Nguyễn tiếp tục tiến Nam, khai hoang vùng sông Cửu Long.",
+          "en": "From the 14th century, Vietnamese dynasties pushed south — engaging Champa and annexing Thuan Hoa (1306). In the 17th–18th centuries, Nguyen lords advanced further, opening the Mekong delta."
+        }
+      },
+      {
+        "label": { "vi": "Thống nhất 1802", "en": "Unification 1802" },
+        "body": {
+          "vi": "Gia Long (Nguyễn Ánh) đánh bại Tây Sơn, lập triều Nguyễn — lần đầu sau nhiều thế kỷ phần lớn đất liền từ Bắc tới Cà Mau dưới một triều đình trung ương.",
+          "en": "Gia Long (Nguyen Anh) defeated the Tay Son and founded the Nguyen dynasty — for the first time in centuries most mainland territory from north to Ca Mau under one central court."
+        },
+        "emphasis": true
+      },
+      {
+        "label": { "vi": "Chủ quyền biển đảo", "en": "Maritime sovereignty" },
+        "body": {
+          "vi": "Triều Nguyễn cử đội Hoàng Sa (1816) khai thác, cứu hộ, tu bổ miếu trên quần đảo — hành động nhà nước khẳng định chủ quyền thực tế. Pháo đài Phú Lâm (Trường Sa, 1933) là mốc cận đại.",
+          "en": "The Nguyen court sent the Hoang Sa flotilla (1816) to exploit, rescue, and maintain shrines — state action affirming real sovereignty. Phu Lam fortress (Truong Sa, 1933) marks the modern era."
+        }
+      }
+    ],
+    "takeaway": {
+      "vi": "1306 — 1945 · Một dải non sông và chủ quyền biển có căn cứ lịch sử.",
+      "en": "1306 — 1945 · One realm and maritime claims rooted in history."
+    }
+  },
+  "6": {
+    "title": { "vi": "Điện Biên Phủ & thống nhất", "en": "Dien Bien Phu & reunification" },
+    "subtitle": { "vi": "1945 — 1975 · Độc lập — Thống nhất", "en": "1945 — 1975 · Independence — Reunification" },
+    "hook": {
+      "vi": "Từ Cách mạng Tháng Tám 1945 đến 30/4/1975 — hai mốc then chốt của độc lập và thống nhất.",
+      "en": "From the August Revolution 1945 to 30 April 1975 — two decisive milestones of independence and reunification."
+    },
+    "beats": [
+      {
+        "label": { "vi": "Kháng chiến chống Pháp", "en": "Resistance against France" },
+        "body": {
+          "vi": "Sau 1945, nước Việt Nam Dân chủ Cộng hòa ra đời. Cuộc kháng chiến (1946–1954) đưa chiến trường lên Tây Bắc; Pháp củng cố tập đoàn cứ điểm Điện Biên Phủ.",
+          "en": "After 1945, the Democratic Republic of Vietnam was born. Resistance (1946–1954) shifted to the northwest; France fortified the Dien Bien Phu stronghold."
+        }
+      },
+      {
+        "label": { "vi": "Chiến thắng Điện Biên Phủ", "en": "Victory at Dien Bien Phu" },
+        "body": {
+          "vi": "7/5/1954, quân Pháp đầu hàng — mốc chấm dứt chiến tranh kháng Pháp, mở đường độc lập và hòa bình trên bàn đàm phán. Hiệp định Giê-ne-vơ (1954) chia tạm tại vĩ tuyến 17.",
+          "en": "On 7 May 1954, French forces surrendered — ending the anti-French war and opening independence at the negotiating table. The Geneva Accords (1954) temporarily divided Vietnam at the 17th parallel."
+        },
+        "emphasis": true
+      },
+      {
+        "label": { "vi": "Thống nhất 1975", "en": "Reunification 1975" },
+        "body": {
+          "vi": "30/4/1975, chiến dịch Hồ Chí Minh giải phóng Sài Gòn. Xe tăng 843 tiến vào Dinh Độc Lập — biểu tượng non sông thống nhất sau gần một thế kỷ chia cắt và chiến tranh.",
+          "en": "On 30 April 1975, the Ho Chi Minh Campaign liberated Saigon. Tank 843 entered Independence Palace — symbol of reunification after nearly a century of division and war."
+        },
+        "emphasis": true
+      }
+    ],
+    "takeaway": {
+      "vi": "1954 · 1975 · Độc lập dân tộc và thống nhất đất nước — bốn thiên niên kỷ bạn vừa bảo vệ trong game.",
+      "en": "1954 · 1975 · Independence and reunification — four millennia you guarded in this game."
+    }
+  }
+}

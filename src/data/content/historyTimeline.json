@@ -1,0 +1,95 @@
+{
+
+  "title": {
+
+    "vi": "Dòng thời gian bạn đã bảo vệ",
+
+    "en": "The timeline you defended"
+
+  },
+
+  "tcnHint": {
+
+    "vi": "TCN = Trước Công Nguyên",
+
+    "en": "BCE = Before Common Era"
+
+  },
+
+  "nodes": [
+
+    {
+
+      "chapterId": 1,
+
+      "label": { "vi": "Đông Sơn", "en": "Dong Son" },
+
+      "yearRange": { "vi": "700 TCN — 179 TCN", "en": "700 BCE — 179 BCE" },
+
+      "short": { "vi": "Văn hóa Đông Sơn", "en": "Dong Son culture" }
+
+    },
+
+    {
+
+      "chapterId": 2,
+
+      "label": { "vi": "Bạch Đằng", "en": "Bach Dang" },
+
+      "yearRange": { "vi": "938", "en": "938" },
+
+      "short": { "vi": "Thoát Bắc thuộc", "en": "End of domination" }
+
+    },
+
+    {
+
+      "chapterId": 3,
+
+      "label": { "vi": "Đông A", "en": "Dong A" },
+
+      "yearRange": { "vi": "1009 — 1400", "en": "1009 — 1400" },
+
+      "short": { "vi": "Ba lần đánh Nguyên", "en": "Three Yuan repulsions" }
+
+    },
+
+    {
+
+      "chapterId": 4,
+
+      "label": { "vi": "Tây Sơn", "en": "Tay Son" },
+
+      "yearRange": { "vi": "1418 — 1789", "en": "1418 — 1789" },
+
+      "short": { "vi": "Lam Sơn · Ngọc Hồi", "en": "Lam Son · Ngoc Hoi" }
+
+    },
+
+    {
+
+      "chapterId": 5,
+
+      "label": { "vi": "Nam tiến", "en": "Nam Tien" },
+
+      "yearRange": { "vi": "1802 — 1945", "en": "1802 — 1945" },
+
+      "short": { "vi": "Bờ cõi · biển đảo", "en": "Borders · islands" }
+
+    },
+
+    {
+
+      "chapterId": 6,
+
+      "label": { "vi": "Điện Biên", "en": "Dien Bien" },
+
+      "yearRange": { "vi": "1945 — 1975", "en": "1945 — 1975" },
+
+      "short": { "vi": "ĐBP · 30/4/1975", "en": "DBP · 30 Apr 1975" }
+
+    }
+
+  ]
+
+}

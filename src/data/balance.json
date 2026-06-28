@@ -1,0 +1,81 @@
+{
+  "timing": {
+    "barSpeed": 1.35,
+    "speedIncreasePerStake": 0.06,
+    "perfectZonePercent": 0.08,
+    "greatZonePercent": 0.15,
+    "goodZonePercent": 0.24,
+    "targetCenter": 0.5
+  },
+  "starRating": {
+    "twoStarGoodPercent": 0.7
+  },
+  "chapterGoals": {
+    "default": {
+      "twoStar": { "minGoodPercent": 0.7 },
+      "threeStar": { "minPerfectPercent": 0.9, "maxMiss": 1, "minCombo": 3 }
+    },
+    "1": {
+      "shortIntro": { "vi": "Gõ đúng nhịp Trống Đồng!", "en": "Hit the Dong Son drum rhythm!" },
+      "hudThreeStar": { "vi": "3★: toàn Perfect, ≤1 miss, combo ≥3", "en": "3★: all Perfect, ≤1 miss, combo ≥3" },
+      "threeStar": { "minPerfectPercent": 1, "maxMiss": 0, "minCombo": 3 }
+    },
+    "2": {
+      "shortIntro": { "vi": "Đóng cọc — đừng để thuyền lọt!", "en": "Drive stakes — don't let ships through!" },
+      "hudThreeStar": { "vi": "3★: 0 thuyền lọt, ≥85% perfect", "en": "3★: 0 ships escaped, ≥85% perfect" },
+      "threeStar": { "minPerfectPercent": 0.85, "maxMiss": 0, "maxShipEscapes": 0, "minCombo": 4 }
+    },
+    "3": {
+      "shortIntro": { "vi": "Diên Hồng — chọn ĐÁNH!", "en": "Dien Hong — choose FIGHT!" },
+      "hudThreeStar": { "vi": "3★: 8/8 ĐÁNH, 0 HÒA", "en": "3★: 8/8 FIGHT, 0 PEACE" },
+      "threeStar": { "minPerfectPercent": 1, "maxMiss": 0, "minFightCount": 8 }
+    },
+    "4": {
+      "shortIntro": { "vi": "Vuốt đúng hướng — chặn quân Thanh!", "en": "Swipe correctly — block the Qing!" },
+      "hudThreeStar": { "vi": "3★: 12/12 chặn, ≤1 miss", "en": "3★: 12/12 blocks, ≤1 miss" },
+      "threeStar": { "minPerfectPercent": 0.92, "maxMiss": 1, "minCombo": 5 }
+    },
+    "5": {
+      "shortIntro": { "vi": "Nối 8 giai đoạn Nam tiến theo thời gian — tránh bão!", "en": "Connect 8 Nam Tien stages in order — avoid storms!" },
+      "hudThreeStar": { "vi": "3★: 0 bão, hoàn thành hết điểm", "en": "3★: 0 storms, complete all points" },
+      "threeStar": { "minPerfectPercent": 1, "maxMiss": 0, "maxStormHits": 0, "minCombo": 6 }
+    },
+    "6": {
+      "shortIntro": { "vi": "Tiếp tế gạo — rồi xe tăng 843!", "en": "Supply rice — then Tank 843!" },
+      "hudThreeStar": { "vi": "3★: 0 lỗi gạo, nhảy đủ chướng ngại", "en": "3★: 0 rice misses, jump all barriers" },
+      "threeStar": { "minPerfectPercent": 0.95, "maxMiss": 0, "maxSupplyMiss": 0, "minCombo": 3 }
+    }
+  },
+  "swipe": {
+    "wavesRequired": 12,
+    "maxMiss": 4,
+    "promptDuration": 2.2,
+    "cooldownBetween": 0.35
+  },
+  "path": {
+    "grabRadius": 42,
+    "stormRadius": 36,
+    "maxStormHits": 2,
+    "flagHoldSeconds": 1.2
+  },
+  "runner": {
+    "supplyDuration": 22,
+    "riceRequired": 6,
+    "maxSupplyMiss": 3,
+    "tankDuration": 18,
+    "obstacleCount": 5,
+    "firstObstacleAt": 0.14,
+    "obstacleSpacing": 0.14,
+    "jumpWindowBefore": 0.05,
+    "jumpWindowAfter": 0.06,
+    "obstaclePassMargin": 0.035
+  },
+  "chapters": {
+    "1": { "stakeCount": 8 },
+    "2": { "stakeCount": 10, "maxShipEscapes": 2, "shipIntervalMs": 4200, "stakeCooldownMs": 750 },
+    "3": { "stakeCount": 8 },
+    "4": { "wavesRequired": 12, "maxMiss": 4 },
+    "5": { "maxStormHits": 2 },
+    "6": { "riceRequired": 6, "maxSupplyMiss": 3 }
+  }
+}

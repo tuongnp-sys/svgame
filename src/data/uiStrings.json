@@ -1,0 +1,255 @@
+{
+  "common": {
+    "continue": { "vi": "TIẾP TỤC", "en": "CONTINUE" },
+    "close": { "vi": "ĐÓNG", "en": "CLOSE" },
+    "play": { "vi": "VÀO TRẬN", "en": "PLAY" },
+    "skip": { "vi": "BỎ QUA", "en": "SKIP" },
+    "tap": { "vi": "CHẠM!", "en": "TAP!" },
+    "combo": { "vi": "COMBO x{combo}", "en": "COMBO x{combo}" },
+    "miss": { "vi": "MISS", "en": "MISS" },
+    "perfect": { "vi": "PERFECT!", "en": "PERFECT!" },
+    "great": { "vi": "GREAT", "en": "GREAT" },
+    "good": { "vi": "GOOD", "en": "GOOD" },
+    "round": { "vi": "Vòng {round}/{total}", "en": "Round {round}/{total}" },
+    "sources": { "vi": "Nguồn tư liệu", "en": "Sources" },
+    "noContent": { "vi": "Chưa có nội dung", "en": "No content yet" },
+    "chapterFallback": { "vi": "Chương {id}", "en": "Chapter {id}" }
+  },
+  "intro": {
+    "title": { "vi": "SƯƠNG MÙ LỊCH SỬ", "en": "MIST OF HISTORY" },
+    "subtitle": { "vi": "Thắp sáng từng thời kỳ trên bản đồ Việt Nam.", "en": "Light up each era on the map of Vietnam." },
+    "tapToEnter": { "vi": "CHẠM ĐỂ VÀO", "en": "TAP TO ENTER" }
+  },
+  "hub": {
+    "title": { "vi": "SƯƠNG MÙ LỊCH SỬ", "en": "MIST OF HISTORY" },
+    "subtitle": { "vi": "Hộ vệ Thời Gian", "en": "Guardian of Time" },
+    "newPlayerHint": {
+      "vi": "Mới chơi? Bấm CÁCH CHƠI → tab TRẬN NÀY\nrồi nút vàng để bắt đầu từ chương dễ",
+      "en": "New here? Tap HOW TO PLAY → THIS BATTLE tab\nthen the gold button to start with an easy chapter"
+    },
+    "howToPlay": { "vi": "CÁCH CHƠI", "en": "HOW TO PLAY" },
+    "leaderboard": { "vi": "BẢNG XẾP HẠNG", "en": "LEADERBOARD" },
+    "startDongSon": { "vi": "BẮT ĐẦU — ĐÔNG SƠN", "en": "START — DONG SON" },
+    "startBachDang": { "vi": "BẮT ĐẦU — BẠCH ĐẰNG", "en": "START — BACH DANG" },
+    "continueChapter": { "vi": "TIẾP TỤC — CH.{id}", "en": "CONTINUE — CH.{id}" },
+    "cliffNewPlayer": {
+      "vi": "Mới chơi? Bấm CÁCH CHƠI (TRẬN NÀY) hoặc ★1",
+      "en": "New here? Tap HOW TO PLAY (THIS BATTLE) or ★1"
+    },
+    "cliffBachDang": {
+      "vi": "Tiếp theo: ★2 Bạch Đằng — xem TRẬN NÀY trước khi chơi",
+      "en": "Next: ★2 Bach Dang — see THIS BATTLE before you play"
+    },
+    "cliffDefault": {
+      "vi": "Chạm vết nứt thời gian (số chương) để bắt đầu",
+      "en": "Tap a time rift (chapter number) to begin"
+    },
+    "chapterWip": {
+      "vi": "Chương này đang được phát triển — chơi chương trước trước!",
+      "en": "This chapter is in development — finish the previous one first!"
+    }
+  },
+  "howTo": {
+    "title": { "vi": "CÁCH CHƠI", "en": "HOW TO PLAY" },
+    "subtitle": {
+      "vi": "Xem trận (thắng/thua) hoặc thao tác — chưa cần chơi ngay",
+      "en": "Preview battle rules or controls — no need to play yet"
+    },
+    "tabBattle": { "vi": "TRẬN NÀY", "en": "THIS BATTLE" },
+    "tabControls": { "vi": "THAO TÁC", "en": "CONTROLS" },
+    "historySummary": { "vi": "Lịch sử tóm tắt", "en": "History summary" },
+    "locked": { "vi": "CHƯA MỞ KHÓA", "en": "LOCKED" },
+    "wip": { "vi": "ĐANG PHÁT TRIỂN", "en": "IN DEVELOPMENT" },
+    "controlsPrefix": { "vi": "THAO TÁC:", "en": "CONTROLS:" },
+    "demoLabel": { "vi": "MINH HỌA", "en": "DEMO" },
+    "simLabel": { "vi": "MÔ PHỎNG TRẬN", "en": "BATTLE SIM" },
+    "winWhen": { "vi": "THẮNG KHI", "en": "WIN WHEN" },
+    "loseWhen": { "vi": "THUA KHI", "en": "LOSE WHEN" },
+    "avoid": { "vi": "Tránh:", "en": "Avoid:" },
+    "actionFooter": { "vi": "Thao tác:", "en": "Action:" }
+  },
+  "briefing": {
+    "title": { "vi": "TRẬN NÀY", "en": "THIS BATTLE" }
+  },
+  "chapterOver": {
+    "victory": { "vi": "CHIẾN THẮNG!", "en": "VICTORY!" },
+    "grandVictory": { "vi": "ĐẠI THẮNG LỊCH SỬ", "en": "HISTORIC TRIUMPH" },
+    "defeat": { "vi": "THỜI GIAN SỤP ĐỔ", "en": "TIME COLLAPSED" },
+    "journeyComplete": { "vi": "◆ HÀNH TRÌNH HOÀN TẤT ◆", "en": "◆ JOURNEY COMPLETE ◆" },
+    "artifact": { "vi": "Bảo vật: {name}", "en": "Artifact: {name}" },
+    "cliffNext": { "vi": "Tiếp theo trên dòng thời gian:", "en": "Next on the timeline:" },
+    "cliffEnd": { "vi": "Kết thúc hành trình:", "en": "End of the journey:" },
+    "nextBattle": { "vi": "TRẬN KẾ → {name}", "en": "NEXT → {name}" },
+    "replay": { "vi": "CHƠI LẠI", "en": "REPLAY" },
+    "backToMap": { "vi": "VỀ BẢN ĐỒ", "en": "BACK TO MAP" },
+    "statsLine": { "vi": "{perfect}: {p}  ·  {miss}: {m}  ·  Combo: {c}", "en": "{perfect}: {p}  ·  {miss}: {m}  ·  Combo: {c}" },
+    "fightLabel": { "vi": "ĐÁNH", "en": "FIGHT" },
+    "peaceLabel": { "vi": "HÒA", "en": "PEACE" },
+    "perfectLabel": { "vi": "Perfect", "en": "Perfect" },
+    "missLabel": { "vi": "Miss", "en": "Miss" }
+  },
+  "hud": {
+    "goalPrefix": { "vi": "Mục tiêu:", "en": "Goal:" },
+    "defaultThreeStar": { "vi": "3★: chơi gần như hoàn hảo", "en": "3★: play nearly perfectly" },
+    "defaultIntro": { "vi": "Sẵn sàng!", "en": "Ready!" },
+    "stakes": { "vi": "Cọc: {done}/{total}", "en": "Stakes: {done}/{total}" },
+    "shipsEscaped": { "vi": "Giặc lọt: {n}/{max}", "en": "Ships escaped: {n}/{max}" },
+    "notes": { "vi": "Nốt: {done}/{total}", "en": "Notes: {done}/{total}" },
+    "missCount": { "vi": "Miss: {n}/5", "en": "Miss: {n}/5" },
+    "fightCount": { "vi": "ĐÁNH: {n}", "en": "FIGHT: {n}" },
+    "peaceCount": { "vi": "HÒA: {n}/3", "en": "PEACE: {n}/3" },
+    "blocks": { "vi": "Chặn: {done}/{total}", "en": "Blocks: {done}/{total}" },
+    "missRatio": { "vi": "Miss: {n}/{max}", "en": "Miss: {n}/{max}" },
+    "waypoints": { "vi": "Điểm: {done}/{total}", "en": "Points: {done}/{total}" },
+    "storms": { "vi": "Bão: {n} (≤{max})", "en": "Storms: {n} (≤{max})" },
+    "rice": { "vi": "Gạo: {n}/{total}", "en": "Rice: {n}/{total}" },
+    "supplyMiss": { "vi": "Lỗi: {n}/{max}", "en": "Miss: {n}/{max}" },
+    "obstacles": { "vi": "Né rào: {done}/{total}", "en": "Dodged: {done}/{total}" },
+    "obstaclesLeft": { "vi": "Còn {left} rào · bỏ lỡ 1 = thua", "en": "{left} barriers left · miss 1 = lose" },
+    "instruction": {
+      "timing_bar": { "vi": "CHẠM khi vạch trắng trong vùng sáng", "en": "TAP when the white marker is in the bright zone" },
+      "rhythm": { "vi": "CHẠM khi nốt chạm vòng vàng", "en": "TAP when the note hits the gold ring" },
+      "binary_choice": { "vi": "Chọn ĐÁNH hoặc HÒA trước khi hết giờ", "en": "Choose FIGHT or PEACE before time runs out" },
+      "rhythm_swipe": { "vi": "VUỐT đúng hướng mũi tên (↑↓←→)", "en": "SWIPE the arrow direction (↑↓←→)" },
+      "path_draw": { "vi": "Chạm chấm xanh → kéo tới điểm kế — tránh vùng bão", "en": "Tap green dot → drag to next point — avoid storms" },
+      "runner": { "vi": "Giai đoạn 1: chọn lane thu G vàng · Giai đoạn 2: bấm NHẢY khi nút sáng", "en": "Phase 1: pick lane, collect G · Phase 2: JUMP when button glows" }
+    },
+    "pathFlag": { "vi": "Giữ ngón trên cờ tại Biển Đông!", "en": "Hold finger on the flag at East Sea!" },
+    "runnerTank": { "vi": "Xe tự chạy · Bấm nút vàng CHẠM ĐỂ NHẢY khi sáng", "en": "Tank auto-runs · Tap gold TAP TO JUMP when lit" }
+  },
+  "mechanics": {
+    "fight": { "vi": "ĐÁNH", "en": "FIGHT" },
+    "peace": { "vi": "HÒA", "en": "PEACE" },
+    "binaryHint": {
+      "vi": "Chọn ĐÁNH đủ 6/8 lần — HÒA quá nhiều = thua",
+      "en": "Choose FIGHT at least 6/8 times — too many PEACE = lose"
+    },
+    "binaryStats": {
+      "vi": "Vòng {round}/{total}  ·  ĐÁNH: {fight}  ·  HÒA: {peace}",
+      "en": "Round {round}/{total}  ·  FIGHT: {fight}  ·  PEACE: {peace}"
+    },
+    "rhythmHint": { "vi": "CHẠM khi nốt chạm vòng vàng", "en": "TAP when the note hits the gold ring" },
+    "storm": { "vi": "BÃO", "en": "STORM" },
+    "reinforcements": { "vi": "TIẾP VIỆN", "en": "SUPPLY" },
+    "barrier": { "vi": "Rào", "en": "Barrier" },
+    "runnerWinHint": { "vi": "Né đủ 5 rào = THẮNG", "en": "Dodge 5 barriers = WIN" },
+    "waitBarrier": { "vi": "CHỜ RÀO…", "en": "WAIT…" },
+    "laneHint": { "vi": "Chạm cột để đổi lane · thu G vàng, tránh đỏ", "en": "Tap columns to switch lane · collect G, avoid red" },
+    "tankTitle": { "vi": "Giai đoạn 2: Xe tăng 843", "en": "Phase 2: Tank 843" },
+    "tankSubtitle": { "vi": "Xe tự chạy — bạn chỉ nhảy qua rào", "en": "Tank auto-runs — you only jump over barriers" },
+    "tankRules": {
+      "vi": "① Nút vàng sáng = bấm CHẠM ĐỂ NHẢY\n② Né đủ 5 rào trước hết đường\n③ Bỏ lỡ 1 rào = thua",
+      "en": "① Gold button lit = TAP TO JUMP\n② Dodge 5 barriers before the end\n③ Miss 1 barrier = lose"
+    },
+    "startRun": { "vi": "BẮT ĐẦU CHẠY", "en": "START RUN" },
+    "tapJump": { "vi": "CHẠM ĐỂ NHẢY", "en": "TAP TO JUMP" },
+    "jumpNow": { "vi": "NHẢY NGAY!", "en": "JUMP NOW!" },
+    "almostThere": { "vi": "Sắp về đích…", "en": "Almost there…" },
+    "dodged": { "vi": "Đã né! ✓", "en": "Dodged! ✓" },
+    "missedBarrier": { "vi": "BỎ LỠ RÀO!", "en": "MISSED BARRIER!" },
+    "missedJumpLose": { "vi": "Không nhảy kịp — thua!", "en": "No jump in time — you lose!" },
+    "flagHoldHere": { "vi": "Giữ ngón ở đây", "en": "Hold finger here" },
+    "flagPlanting": { "vi": "Đang cắm cờ…", "en": "Planting flag…" },
+    "flagDone": { "vi": "Chủ quyền biển đảo!", "en": "Maritime sovereignty!" },
+    "pathCompleteBanner": {
+      "vi": "Dòng thời gian Nam tiến hoàn tất!\nGiữ cờ tại {label}",
+      "en": "Nam Tien timeline complete!\nHold the flag at {label}"
+    },
+    "supplyDone": { "vi": "✓ Tiếp tế xong!", "en": "✓ Supply complete!" },
+    "phase1Label": { "vi": "Giai đoạn 1/2 · Gạo {n}/{total}", "en": "Phase 1/2 · Rice {n}/{total}" },
+    "phase2Label": { "vi": "Giai đoạn 2/2 · Còn {remaining} rào · Xe tự chạy", "en": "Phase 2/2 · {remaining} barriers left · Auto-run" },
+    "barrierApproaching": { "vi": "Rào {n}/{total} sắp tới…", "en": "Barrier {n}/{total} approaching…" },
+    "tooEarly": { "vi": "Quá sớm!", "en": "Too early!" },
+    "swipeBlock": { "vi": "CHẶN!", "en": "BLOCK!" }
+  },
+  "juice": {
+    "spirit": { "vi": "HÀO KHÍ!", "en": "FIGHTING SPIRIT!" },
+    "shipEscaped": { "vi": "THUYỀN LỌT!", "en": "SHIP ESCAPED!" },
+    "peaceWrong": { "vi": "HÒA?!", "en": "PEACE?!" },
+    "storm": { "vi": "BÃO!", "en": "STORM!" },
+    "pathComplete": { "vi": "GIANG SƠN LIỀN MỘT DẢI!", "en": "ONE NATION, ONE STRIP OF LAND!" },
+    "flagPlanted": { "vi": "CHỦ QUYỀN BIỂN ĐẢO!", "en": "MARITIME SOVEREIGNTY!" }
+  },
+  "leaderboard": {
+    "title": { "vi": "TOP HỘ VỆ THỜI GIAN", "en": "TOP TIME GUARDIANS" },
+    "empty": { "vi": "Chưa có điểm — chơi một chương để lên bảng!", "en": "No scores yet — play a chapter to rank!" },
+    "entry": { "vi": "{rank}. {name} — {score}đ (Ch.{chapter} {stars})", "en": "{rank}. {name} — {score} pts (Ch.{chapter} {stars})" },
+    "defaultName": { "vi": "Hộ vệ", "en": "Guardian" }
+  },
+  "timeline": {
+    "defaultTitle": { "vi": "Dòng thời gian", "en": "Timeline" }
+  },
+  "pathWaypoint": {
+    "stage": { "vi": "◆ GIAI ĐOẠN {step}/{total} ◆", "en": "◆ STAGE {step}/{total} ◆" },
+    "nextPoint": { "vi": "Tiếp theo: nối điểm xanh sáng trên bản đồ", "en": "Next: connect the glowing green point on the map" },
+    "holdFlag": { "vi": "Giữ ngón tại điểm cuối để cắm cờ", "en": "Hold finger at the final point to plant the flag" }
+  },
+  "modal": {
+    "milestoneRibbon": { "vi": "◆ CỘT MỐC LỊCH SỬ ◆", "en": "◆ HISTORIC MILESTONE ◆" },
+    "scrollHint": { "vi": "Vuốt để đọc · bấm TIẾP TỤC khi sẵn sàng", "en": "Scroll to read · tap CONTINUE when ready" },
+    "scrollIdle": { "vi": "Bấm TIẾP TỤC khi sẵn sàng", "en": "Tap CONTINUE when ready" },
+    "historyScrollHint": { "vi": "Vuốt lên / xuống để đọc ↓", "en": "Scroll up / down to read ↓" }
+  },
+  "tutorial": {
+    "title": { "vi": "CÁCH CHƠI", "en": "HOW TO PLAY" },
+    "step3": { "vi": "③ CHẠM màn hình khi vạch trắng nằm trong vùng vàng/xanh.", "en": "③ TAP when the white marker is in the yellow/green zone." },
+    "tapLikeThis": { "vi": "↓ Chạm đúng lúc như thế này", "en": "↓ Tap at the right moment like this" },
+    "startPlay": { "vi": "BẮT ĐẦU CHƠI", "en": "START PLAYING" },
+    "bachDangTitle": { "vi": "Sóng Cuộn Bạch Đằng", "en": "Bach Dang Rising Tide" },
+    "timingStep1": {
+      "vi": "① Mục tiêu: đóng đủ 10 cọc trước khi quá 2 thuyền giặc lọt qua.",
+      "en": "① Goal: drive 10 stakes before more than 2 enemy ships escape."
+    },
+    "timingStep2": {
+      "vi": "② Vạch trắng chạy qua lại trên thanh.",
+      "en": "② The white marker moves back and forth on the bar."
+    }
+  },
+  "binaryPrompts": [
+    { "vi": "Giặc Nguyên đe dọa xâm lược — chọn?", "en": "Yuan invaders threaten invasion — choose?" },
+    { "vi": "Bô lão hỏi: Có nên mở cửa thương mại?", "en": "Elders ask: Open trade routes?" },
+    { "vi": "Quân Mông tiến vào biên giới — phản ứng?", "en": "Mongol army reaches the border — respond?" },
+    { "vi": "Có nên cầu hòa để giữ Thăng Long?", "en": "Sue for peace to keep Thang Long?" },
+    { "vi": "Kẻ thù khiêu khích — đáp trả?", "en": "The enemy provokes — retaliate?" },
+    { "vi": "Có chấp nhận xin hòa để tránh chiến tranh?", "en": "Accept peace to avoid war?" },
+    { "vi": "Dân chúng sợ hãi — quyết định?", "en": "The people are afraid — your call?" },
+    { "vi": "Giặc tiến sát kinh thành — hành động?", "en": "Enemy at the capital gates — act?" }
+  ],
+  "battleSim": {
+    "stakesHud": { "vi": "Cọc: {stakes}/10  ·  Giặc lọt: {escapes}/2", "en": "Stakes: {stakes}/10  ·  Escaped: {escapes}/2" },
+    "loseShips": { "vi": "THUA — Giặc lọt 3 lần!", "en": "LOSE — 3 ships escaped!" },
+    "winStakes": { "vi": "THẮNG — Đủ 10 cọc!", "en": "WIN — 10 stakes driven!" },
+    "stakesLabel": { "vi": "Cọc: {done}/{total}", "en": "Stakes: {done}/{total}" },
+    "binaryLines": {
+      "vi": ["ĐÁNH: 1/6", "HÒA: 0/2", "ĐÁNH: 2/6 ✓"],
+      "en": ["FIGHT: 1/6", "PEACE: 0/2", "FIGHT: 2/6 ✓"]
+    },
+    "rhythmLines": {
+      "vi": ["Nốt: 1/8 ✓", "Nốt: 2/8 ✓", "Miss: 1/5 ✗", "Nốt: 3/8 ✓"],
+      "en": ["Notes: 1/8 ✓", "Notes: 2/8 ✓", "Miss: 1/5 ✗", "Notes: 3/8 ✓"]
+    },
+    "swipeLines": {
+      "vi": ["Chặn: 1/12 ✓", "MISS 1/4", "Chặn: 2/12 ✓"],
+      "en": ["Blocks: 1/12 ✓", "MISS 1/4", "Blocks: 2/12 ✓"]
+    },
+    "pathLines": {
+      "vi": ["Điểm: 2/8 ✓", "Tránh bão!", "Điểm: 4/8 ✓"],
+      "en": ["Points: 2/8 ✓", "Avoid storm!", "Points: 4/8 ✓"]
+    },
+    "runnerLines": {
+      "vi": ["Gạo: 2/6", "Nhảy! ✓", "Chướng: 1/5"],
+      "en": ["Rice: 2/6", "Jump! ✓", "Barrier: 1/5"]
+    },
+    "defaultProgress": { "vi": "Tiến độ trận...", "en": "Battle progress..." }
+  },
+  "howToDemo": {
+    "enemyThreat": { "vi": "Giặc đe dọa — chọn?", "en": "Enemy threat — choose?" },
+    "tapOneBtn": { "vi": "← Bấm 1 trong 2 nút", "en": "← Tap one of 2 buttons" },
+    "swipeUp": { "vi": "Vuốt lên ↑", "en": "Swipe up ↑" },
+    "dragFinger": { "vi": "☝ kéo ngón", "en": "☝ drag finger" },
+    "connectDots": { "vi": "Kéo ngón nối các chấm", "en": "Drag to connect dots" },
+    "left": { "vi": "TRÁI", "en": "LEFT" },
+    "right": { "vi": "PHẢI", "en": "RIGHT" },
+    "thenJump": { "vi": "Sau đó: chạm khi vùng vàng nhảy", "en": "Then: tap when the gold zone jumps" }
+  }
+}

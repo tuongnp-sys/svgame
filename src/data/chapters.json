@@ -1,0 +1,130 @@
+{
+  "chapters": [
+    {
+      "id": 1,
+      "battleName": { "vi": "TRẬN TRỐNG ĐỒNG", "en": "Battle of Dong Son" },
+      "title": { "vi": "Cội Nguồn Đông Sơn", "en": "Dong Son Origins" },
+      "era": { "vi": "Văn Lang — Âu Lạc", "en": "Van Lang — Au Lac" },
+      "mechanic": "rhythm",
+      "artifact": { "vi": "Mũi tên đồng Cổ Loa", "en": "Co Loa bronze arrow" },
+      "factId": "ch1",
+      "mapRegion": "north",
+      "mapColor": "#2d6a6a",
+      "hubPin": { "x": 0.48, "y": 0.22 },
+      "unlockedByDefault": true,
+      "hook": {
+        "vi": "Xưởng đúc đang khắc họa tiết lên Trống — trước khi quân Thục ập xuống Cổ Loa.",
+        "en": "The bronze workshop engraves the drum — before the Thu invaders reach Co Loa."
+      },
+      "cliffhanger": {
+        "vi": "Cổ Loa sụp đổ… sương mù mở ra Bắc thuộc — và một thế kỷ chờ ngày Bạch Đằng.",
+        "en": "Co Loa falls… mist opens the era of domination — and a century awaits Bach Dang."
+      }
+    },
+    {
+      "id": 2,
+      "battleName": { "vi": "TRẬN BẠCH ĐẰNG", "en": "Battle of Bach Dang" },
+      "title": { "vi": "Sóng Cuộn Bạch Đằng", "en": "Bach Dang Rising Tide" },
+      "era": { "vi": "Bắc thuộc — 938", "en": "Chinese Domination — 938" },
+      "mechanic": "timing_bar",
+      "artifact": { "vi": "Cọc gỗ Bạch Đằng", "en": "Bach Dang wooden stake" },
+      "factId": "ch2",
+      "mapRegion": "north_central",
+      "mapColor": "#1a3a5c",
+      "hubPin": { "x": 0.55, "y": 0.3 },
+      "unlockedByDefault": true,
+      "hook": {
+        "vi": "Đêm triều cường — cọc gỗ âm thầm chờ thuyền Nam Hán lọt vào Bạch Đằng.",
+        "en": "Flood tide tonight — stakes wait silently for the Southern Han fleet on Bach Dang."
+      },
+      "cliffhanger": {
+        "vi": "938 vang vọng! Thăng Long mới dựng — nhưng sương mù phía Bắc báo hiệu binh thiết Nguyên-Mông.",
+        "en": "938 resounds! Thang Long rises — yet northern mist heralds the Yuan-Mongol armies."
+      }
+    },
+    {
+      "id": 3,
+      "battleName": { "vi": "TRẬN DIÊN HỒNG", "en": "Battle of Dien Hong" },
+      "title": { "vi": "Thời kỳ Đông A", "en": "Dong A Era" },
+      "era": { "vi": "Lý — Trần", "en": "Ly — Tran Dynasties" },
+      "mechanic": "binary_choice",
+      "artifact": { "vi": "Sắc lệnh Sát Thát", "en": "Sat That decree" },
+      "factId": "ch3",
+      "mapRegion": "thang_long",
+      "mapColor": "#c9a227",
+      "hubPin": { "x": 0.5, "y": 0.38 },
+      "unlockedByDefault": false,
+      "hook": {
+        "vi": "Diên Hồng, 1284 — lão, trẻ, gái, trai: ai cũng được hỏi, ai cũng được chọn đánh.",
+        "en": "Dien Hong, 1284 — old and young, all may speak; all choose to fight."
+      },
+      "cliffhanger": {
+        "vi": "Hào khí Đông A chưa nguội — sương mù dày lên sông Gianh: đất nước sắp chia hai miền.",
+        "en": "Dong A spirit still burns — mist thickens on Gianh River: the realm will split in two."
+      }
+    },
+    {
+      "id": 4,
+      "battleName": { "vi": "TRẬN NGỌC HỒI", "en": "Battle of Ngoc Hoi" },
+      "title": { "vi": "Lam Sơn & Tây Sơn", "en": "Lam Son & Tay Son" },
+      "era": { "vi": "1407 — 1789", "en": "1407 — 1789" },
+      "mechanic": "rhythm_swipe",
+      "artifact": { "vi": "Gươm Thuận Thiên", "en": "Thuan Thien sword" },
+      "factId": "ch4",
+      "mapRegion": "split",
+      "mapColor": "#8b4513",
+      "hubPin": { "x": 0.46, "y": 0.48 },
+      "unlockedByDefault": false,
+      "hook": {
+        "vi": "Tết Kỷ Dậu 1789 — quân Thanh chiếm Thăng Long; Nguyễn Huệ kéo quân từ Nam, quyết một trận định giang sơn.",
+        "en": "Tet Ky Dau 1789 — Qing holds Thang Long; Nguyen Hue marches from the south to decide the realm."
+      },
+      "cliffhanger": {
+        "vi": "Thăng Long thu về — con đường Nam tiến và biển đảo vẫn chờ người hộ vệ thời gian.",
+        "en": "Thang Long is retaken — the southward path and the islands await the Time Guardian."
+      }
+    },
+    {
+      "id": 5,
+      "battleName": { "vi": "TRẬN NAM TIẾN", "en": "Southern Advance" },
+      "title": { "vi": "Thống Nhất Bờ Cõi", "en": "Unified Realm" },
+      "era": { "vi": "Nguyễn — Kháng Pháp", "en": "Nguyen — Anti-French" },
+      "mechanic": "path_draw",
+      "artifact": { "vi": "Mộc bản Hoàng Sa", "en": "Hoang Sa woodblock" },
+      "factId": "ch5",
+      "mapRegion": "s_shape",
+      "mapColor": "#6b3fa0",
+      "hubPin": { "x": 0.52, "y": 0.58 },
+      "unlockedByDefault": false,
+      "hook": {
+        "vi": "Từ Thuận Hóa tới Hoàng Sa — nối từng mốc Nam tiến, khẳng định chủ quyền trên biển.",
+        "en": "From Thuan Hoa to Hoang Sa — link each step southward and affirm sovereignty at sea."
+      },
+      "cliffhanger": {
+        "vi": "Giang sơn liền một dải — thế kỷ XX mở ra với khát vọng độc lập thống nhất.",
+        "en": "One united realm — the 20th century opens with the drive for independence and reunification."
+      }
+    },
+    {
+      "id": 6,
+      "battleName": { "vi": "TRẬN ĐIỆN BIÊN", "en": "Battle of Dien Bien" },
+      "title": { "vi": "Bài Ca Đại Thắng", "en": "Song of Victory" },
+      "era": { "vi": "1945 — 1975", "en": "1945 — 1975" },
+      "mechanic": "runner",
+      "artifact": { "vi": "Lá cờ đỏ sao vàng", "en": "Red flag with gold star" },
+      "factId": "ch6",
+      "mapRegion": "modern",
+      "mapColor": "#c0392b",
+      "hubPin": { "x": 0.5, "y": 0.72 },
+      "unlockedByDefault": false,
+      "hook": {
+        "vi": "1954: gạo và đạn về chiến hào Điện Biên. 1975: xe tăng 843 mở cửa Dinh Độc Lập.",
+        "en": "1954: rice and ammo reach Dien Bien Phu. 1975: tank 843 opens Independence Palace."
+      },
+      "cliffhanger": {
+        "vi": "Sương mù tan — bạn đã nối liền sáu thời kỳ. Lịch sử nằm trong từng trận bạn vừa giữ lại.",
+        "en": "The mist clears — you have linked six eras. History lives in every battle you preserved."
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "tracks": {
+    "menu": "bgm_menu",
+    "chapter": "bgm_chapter",
+    "victory": "bgm_victory"
+  },
+  "sfx": {
+    "perfect": "sfx_perfect",
+    "stake": "sfx_stake",
+    "miss": "sfx_miss",
+    "victory": "sfx_victory",
+    "unlock": "sfx_unlock",
+    "tap": "sfx_tap"
+  },
+  "volume": {
+    "menu": 0.4,
+    "chapter": 0.45,
+    "victory": 0.5,
+    "perfect": 0.55,
+    "stake": 0.5,
+    "miss": 0.45,
+    "victory_sfx": 0.6,
+    "unlock": 0.55,
+    "tap": 0.4
+  }
+}

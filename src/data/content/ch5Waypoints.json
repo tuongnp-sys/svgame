@@ -1,0 +1,104 @@
+{
+  "waypoints": [
+    {
+      "order": 1,
+      "label": { "vi": "Thuận Hóa", "en": "Thuan Hoa" },
+      "era": "1306–1470",
+      "title": { "vi": "Nam tiến sơ khai", "en": "Early southward expansion" },
+      "summary": {
+        "vi": "Vua Trần Anh Tông nhận hai châu Ô, Lý (Thuận, Hóa) — bước đầu đưa biên giới phía Nam chạm vùng Chăm Pa, mở đà Nam tiến suốt thời hậu Trần.",
+        "en": "King Tran Anh Tong received O and Ly provinces (Thuan, Hoa) — first pushing the southern border into Champa and opening centuries of Nam Tien."
+      },
+      "x": 118,
+      "y": 188
+    },
+    {
+      "order": 2,
+      "label": { "vi": "Phú Yên", "en": "Phu Yen" },
+      "era": "1611–1692",
+      "title": { "vi": "Chúa Nguyễn tiến Nam", "en": "Nguyen lords march south" },
+      "summary": {
+        "vi": "Chúa Nguyễn Phúc Nguyên đặt dinh thú tại Phú Yên — củng cố ảnh hưởng Nam Trung Bộ, chuẩn bị thế lực Đàng Trong.",
+        "en": "Lord Nguyen Phuc Nguyen established a base at Phu Yen — strengthening central-south influence and the Dang Trong power base."
+      },
+      "x": 158,
+      "y": 248
+    },
+    {
+      "order": 3,
+      "label": { "vi": "Gia Định", "en": "Gia Dinh" },
+      "era": "1698–1776",
+      "title": { "vi": "Mở cõi phương Nam", "en": "Opening the deep south" },
+      "summary": {
+        "vi": "Nguyễn Hữu Cảnh lập phủ Gia Định — “điểm neo” khai hoang vùng sông Cửu Long, tiền thân đô thị Sài Gòn–TP.HCM.",
+        "en": "Nguyen Huu Canh founded Gia Dinh — anchor for Mekong Delta settlement, precursor to Saigon–Ho Chi Minh City."
+      },
+      "x": 198,
+      "y": 318
+    },
+    {
+      "order": 4,
+      "label": { "vi": "Thống nhất", "en": "Unification" },
+      "era": "1802",
+      "title": { "vi": "Gia Long thống nhất", "en": "Gia Long unifies" },
+      "summary": {
+        "vi": "Gia Long (Nguyễn Ánh) đánh bại Tây Sơn, lập triều Nguyễn — lần đầu sau nhiều thế kỷ giang sơn liền một dải dưới một triều đình trung ương.",
+        "en": "Gia Long (Nguyen Anh) defeated Tay Son and founded the Nguyen dynasty — first unified realm under one court in centuries."
+      },
+      "x": 168,
+      "y": 388
+    },
+    {
+      "order": 5,
+      "label": { "vi": "Cực Nam", "en": "Southern tip" },
+      "era": "1802–1830",
+      "title": { "vi": "Hoàn thiện biên giới", "en": "Completing the border" },
+      "summary": {
+        "vi": "Triều Nguyễn củng cố cõi Nam tới Cà Mau — khép kín đường bờ phía Nam, hoàn thiện hình dáng đất liền hôm nay.",
+        "en": "The Nguyen court secured the south to Ca Mau — closing the southern coastline into today's mainland shape."
+      },
+      "x": 138,
+      "y": 458
+    },
+    {
+      "order": 6,
+      "label": { "vi": "Hoàng Sa", "en": "Hoang Sa" },
+      "era": "1816",
+      "title": { "vi": "Chủ quyền quần đảo", "en": "Archipelago sovereignty" },
+      "summary": {
+        "vi": "Minh Mạng sai đội Hoàng Sa khai thác, cứu hộ, tu bổ miếu — hành động nhà nước khẳng định chủ quyền thực tế trên quần đảo.",
+        "en": "Minh Mang sent Hoang Sa teams to exploit, rescue, and maintain shrines — state action affirming practical sovereignty."
+      },
+      "x": 195,
+      "y": 528
+    },
+    {
+      "order": 7,
+      "label": { "vi": "Trường Sa", "en": "Truong Sa" },
+      "era": "1933–1988",
+      "title": { "vi": "Khẳng định biển Đông", "en": "Affirming the East Sea" },
+      "summary": {
+        "vi": "Pháo đài Phú Lâm (Trường Sa, 1933) do chính quyền Việt Nam Nam Kỳ xây — mốc chủ quyền trước khi Nhà nước thống nhất tiếp tục khẳng định quyền lợi quốc gia trên biển.",
+        "en": "Phu Lam fort (Truong Sa, 1933) built by Cochinchina administration — a sovereignty marker before reunified Vietnam continued maritime claims."
+      },
+      "x": 248,
+      "y": 598
+    },
+    {
+      "order": 8,
+      "label": { "vi": "Biển Đông", "en": "East Sea" },
+      "era": { "vi": "Hiện đại", "en": "Modern era" },
+      "title": { "vi": "Bảo vệ chủ quyền biển đảo", "en": "Defending maritime sovereignty" },
+      "summary": {
+        "vi": "Chủ quyền biển đảo là thành quả lịch sử lâu dài — từ Nam tiến, đội Hoàng Sa đến khẳng định pháp lý và thực tiễn trên biển Đông ngày nay.",
+        "en": "Maritime sovereignty is a long historical outcome — from Nam Tien and Hoang Sa teams to legal and practical affirmation on today's East Sea."
+      },
+      "x": 285,
+      "y": 668
+    }
+  ],
+  "storms": [
+    { "x": 215, "y": 350, "r": 32 },
+    { "x": 95, "y": 490, "r": 30 }
+  ]
+}
